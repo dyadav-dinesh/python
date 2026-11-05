@@ -1,7 +1,8 @@
 # Read a number of seconds and print it as HH:MM:SS.
-SS = int(input("Enter the seconds:- "))
+total = int(input("Enter the seconds:- "))
 
-MM = SS % 60
-HH = MM % 60
+HH = total // 3600
+MM = (total % 3600) // 60
+SS = total % 60
 
-print(f"{HH}:{MM}:{SS}")
+print(f"{HH:02}:{MM:02}:{SS:02}")
